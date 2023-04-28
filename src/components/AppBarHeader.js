@@ -1,0 +1,129 @@
+import React, { useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Button, Drawer, List, ListItem, ListItemText } from "@mui/material";
+import "../styles.css";
+const AppBarHeader = ({ onLogout }) => {
+  const [openDrawer, setOpenDrawer] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setOpenDrawer(!openDrawer);
+  };
+
+  const drawerItems = [
+    { text: "Home", href: "/home" },
+    { text: "Connect", href: "/connect" },
+    { text: "About", href: "/about" },
+  ];
+
+  return (
+    <Router>
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1,
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            height: "80px",
+            padding: "0 2rem",
+            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+          }}
+        >
+          <Button
+            variant="text"
+            color="inherit"
+            onClick={handleDrawerToggle}
+            style={{ fontSize: "1rem", fontWeight: "bold", color: "#fff" }}
+          >
+            Menu
+          </Button>
+
+          <Button
+            variant="text"
+            color="inherit"
+            onClick={handleDrawerToggle}
+            style={{
+              fontSize: "1rem",
+              fontWeight: "bold",
+              color: "#fff",
+              padding: "10px 0",
+            }}
+          >
+            <span className="menu-icon"></span>
+          </Button>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Button
+              href="/chatbox"
+              style={{
+                fontSize: "1rem",
+                fontWeight: "bold",
+                color: "#fff",
+                backgroundColor: "#4CAF50",
+                borderRadius: "25px",
+                padding: "0.5rem 1rem",
+                marginLeft: "2rem",
+              }}
+            >
+              Chat with us!
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={onLogout}
+              style={{
+                fontSize: "1rem",
+                fontWeight: "bold",
+                borderRadius: "25px",
+                marginLeft: "2rem",
+              }}
+            >
+              logout
+            </Button>
+          </div>
+        </div>
+        <Drawer
+          anchor="right"
+          open={openDrawer}
+          onClose={handleDrawerToggle}
+          PaperProps={{
+            style: {
+              backgroundColor: "#d1c4e9",
+              fontFamily: "'Gloria Hallelujah', cursive",
+              fontWeight: "bold",
+            },
+          }}
+        >
+          <List>
+            {drawerItems.map((item) => (
+              <ListItem
+                button
+                key={item.text}
+                onClick={handleDrawerToggle}
+                component="a"
+                href={item.href}
+              >
+                <ListItemText primary={item.text} />
+              </ListItem>
+            ))}
+          </List>
+        </Drawer>
+      </div>
+    </Router>
+  );
+};
+
+export default AppBarHeader;
