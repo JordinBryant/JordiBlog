@@ -17,10 +17,6 @@ const Home = () => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          height: "80px",
-          padding: "0 2rem",
-          backgroundColor: "#d1c4e9",
-          boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
         }}
       ></div>
       <Router>
@@ -30,7 +26,7 @@ const Home = () => {
             float: "left",
             backgroundSize: "cover",
             backgroundPosition: "center center",
-            backgroundColor: "#d1c4e9",
+            backgroundColor: "#ffcc80",
             backgroundAttachment: "fixed",
             height: "100vh",
             width: "100vw",

@@ -1,10 +1,18 @@
 import React from "react";
 import { Grid, Paper, Typography, Button, Box, Link } from "@mui/material";
 
+const font = {
+  fontFamily: "'Gloria Hallelujah', 'Instrument Serif', 'Lora', cursive",
+  fontWeight: 400,
+};
+
 const styles = {
   dashboard: {
     flexGrow: 1,
     padding: "16px",
+  },
+  typography: {
+    fontFamily: "Roboto Slab, sans-serif",
   },
   paper: {
     padding: "16px",
@@ -20,6 +28,7 @@ const styles = {
     "&:hover": {
       backgroundColor: "#6fac8a",
     },
+    ...font,
   },
 };
 
@@ -32,50 +41,94 @@ function Dashboard() {
         </Grid>
       </Grid>
       <Grid container spacing={3}>
-        {/* <Grid item xs={12}>
-          <Paper style={styles.paper}>
-            <Typography variant="h6">Dashboard</Typography>
-          </Paper>
-        </Grid> */}
-        <Grid item xs={12} md={6}>
-          <Paper style={styles.paper}>
-            <Typography variant="h6">Coffee Lovers</Typography>
-            <Box display="flex" flexDirection="column" alignItems="center">
-              <img
-                src="https://i.imgur.com/cjCU6Dl.jpg"
-                alt="coffee img"
-                style={{ width: "100px", height: "100px" }}
-              />
+        <Grid item xs={10} md={4}>
+          <Paper
+            style={{
+              ...styles.paper,
+              margin: "1rem",
+              padding: "1rem",
+              backgroundImage: "url(https://i.imgur.com/Y1YTC09.jpg)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <Typography
+              variant="h6"
+              style={{
+                fontFamily: "'Gloria Hallelujah', 'Instrument Serif', Lora",
+              }}
+            >
+              Coffee Lovers
+            </Typography>
+            <Box
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              style={{ marginTop: "1rem" }}
+            >
               <Button variant="contained" style={styles.button}>
                 View Details
               </Button>
             </Box>
           </Paper>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <Paper style={styles.paper}>
-            <Typography variant="h6">Faith</Typography>
-            <Box display="flex" flexDirection="column" alignItems="center">
-              <img
-                src="https://i.imgur.com/OoiWUDg.jpg"
-                alt="coffee img"
-                style={{ width: "100px", height: "100px" }}
-              />
+        <Grid item xs={10} md={4}>
+          <Paper
+            style={{
+              ...styles.paper,
+              margin: "1rem",
+              padding: "1rem",
+              backgroundImage: "url(https://i.imgur.com/4kVNM4H.jpg)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <Typography
+              variant="h6"
+              style={{
+                fontFamily: "'Gloria Hallelujah', 'Instrument Serif', Lora",
+              }}
+            >
+              Faith
+            </Typography>
+            <Box
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              style={{ marginTop: "1rem" }}
+            >
               <Button variant="contained" style={styles.button}>
                 View Details
               </Button>
             </Box>
           </Paper>
         </Grid>
-        <Grid item xs={12} md={4}>
-          <Paper style={styles.paper}>
-            <Typography variant="h6">Fitness</Typography>
-            <Box display="flex" flexDirection="column" alignItems="center">
-              <img
-                src="https://i.imgur.com/J0N30AM.jpg"
-                alt="coffee img"
-                style={{ width: "100px", height: "100px" }}
-              />
+
+        <Grid item xs={10} md={4}>
+          <Paper
+            style={{
+              ...styles.paper,
+              margin: "1rem",
+              padding: "1rem",
+              backgroundImage: "url(https://i.imgur.com/veuP5Ng.jpg)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <Typography
+              variant="h6"
+              style={{
+                fontFamily: "'Gloria Hallelujah', 'Instrument Serif', Lora",
+              }}
+            >
+              Fitness
+            </Typography>
+            <Box
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              style={{ marginTop: "1rem" }}
+            >
               <Link
                 href="https://www.youtube.com/channel/UCuMH8HLMnKYrSenyILvRRuA"
                 target="_blank"
@@ -87,30 +140,93 @@ function Dashboard() {
             </Box>
           </Paper>
         </Grid>
-        <Grid item xs={12} md={4}>
-          <Paper style={styles.paper}>
-            <Typography variant="h6">Beauty</Typography>
-            <Box display="flex" flexDirection="column" alignItems="center">
-              <img
-                src="https://i.imgur.com/7m840tc.jpg"
-                alt="coffee img"
-                style={{ width: "100px", height: "100px" }}
-              />
+        <Grid item xs={10} md={4}>
+          <Paper
+            style={{
+              ...styles.paper,
+              margin: "1rem",
+              padding: "1rem",
+              backgroundImage: "url(https://i.imgur.com/dgfzBx4.jpg)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <Typography
+              variant="h6"
+              style={{
+                fontFamily: "'Gloria Hallelujah', 'Instrument Serif', Lora",
+              }}
+            >
+              Beauty
+            </Typography>
+            <Box
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              style={{ marginTop: "1rem" }}
+            >
               <Button variant="contained" style={styles.button}>
                 View Details
               </Button>
             </Box>
           </Paper>
         </Grid>
-        <Grid item xs={12} md={4}>
-          <Paper style={styles.paper}>
-            <Typography variant="h6">Health</Typography>
-            <Box display="flex" flexDirection="column" alignItems="center">
-              <img
-                src="https://i.imgur.com/i4WYn5L.jpg"
-                alt="coffee img"
-                style={{ width: "200px", height: "100px" }}
-              />
+        <Grid item xs={10} md={4}>
+          <Paper
+            style={{
+              ...styles.paper,
+              margin: "1rem",
+              padding: "1rem",
+              backgroundImage: "url(https://i.imgur.com/i4WYn5L.jpg)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <Typography
+              variant="h6"
+              style={{
+                fontFamily: "'Gloria Hallelujah', 'Instrument Serif', Lora",
+              }}
+            >
+              Health
+            </Typography>
+            <Box
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              style={{ marginTop: "1rem" }}
+            >
+              <Button variant="contained" style={styles.button}>
+                View Details
+              </Button>
+            </Box>
+          </Paper>
+        </Grid>
+        <Grid item xs={10} md={4}>
+          <Paper
+            style={{
+              ...styles.paper,
+              margin: "1rem",
+              padding: "1rem",
+              backgroundImage: "url(https://i.imgur.com/sVkop0B.jpg)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <Typography
+              variant="h6"
+              style={{
+                fontFamily: "'Gloria Hallelujah', 'Instrument Serif', Lora",
+              }}
+            >
+              Motherhood
+            </Typography>
+            <Box
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              style={{ marginTop: "1rem" }}
+            >
               <Button variant="contained" style={styles.button}>
                 View Details
               </Button>

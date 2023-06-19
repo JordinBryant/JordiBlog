@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Button, Drawer, List, ListItem, ListItemText } from "@mui/material";
 import "../styles.css";
+
 const AppBarHeader = ({ onLogout }) => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
@@ -33,14 +34,13 @@ const AppBarHeader = ({ onLogout }) => {
             alignItems: "center",
             height: "80px",
             padding: "0 2rem",
-            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
           }}
         >
           <Button
             variant="text"
             color="inherit"
             onClick={handleDrawerToggle}
-            style={{ fontSize: "1rem", fontWeight: "bold", color: "#fff" }}
+            style={{ fontSize: "1rem", fontWeight: "bold", color: "#212121" }}
           >
             Menu
           </Button>
@@ -72,14 +72,17 @@ const AppBarHeader = ({ onLogout }) => {
                 fontSize: "1rem",
                 fontWeight: "bold",
                 color: "#fff",
-                backgroundColor: "#4CAF50",
+                backgroundColor: "#558b2f",
                 borderRadius: "25px",
                 padding: "0.5rem 1rem",
                 marginLeft: "2rem",
+                fontFamily:
+                  "'Gloria Hallelujah', 'Instrument Serif', 'Lora', cursive",
               }}
             >
               Chat with us!
             </Button>
+
             <Button
               variant="contained"
               color="primary"
@@ -89,6 +92,8 @@ const AppBarHeader = ({ onLogout }) => {
                 fontWeight: "bold",
                 borderRadius: "25px",
                 marginLeft: "2rem",
+                backgroundColor: "#3f51b5",
+                color: "#fff",
               }}
             >
               logout
@@ -101,8 +106,9 @@ const AppBarHeader = ({ onLogout }) => {
           onClose={handleDrawerToggle}
           PaperProps={{
             style: {
-              backgroundColor: "#d1c4e9",
-              fontFamily: "'Gloria Hallelujah', cursive",
+              backgroundColor: "#ffcc80",
+              fontFamily:
+                "'Gloria Hallelujah', 'Instrument Serif', 'Lora', cursive, sans-serif",
               fontWeight: "bold",
             },
           }}
@@ -116,7 +122,15 @@ const AppBarHeader = ({ onLogout }) => {
                 component="a"
                 href={item.href}
               >
-                <ListItemText primary={item.text} />
+                <ListItemText
+                  primary={item.text}
+                  primaryTypographyProps={{
+                    style: {
+                      fontFamily:
+                        "'Gloria Hallelujah', 'Instrument Serif', 'Lora', cursive",
+                    },
+                  }}
+                />
               </ListItem>
             ))}
           </List>
